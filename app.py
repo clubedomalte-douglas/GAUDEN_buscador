@@ -39,14 +39,6 @@ with st.sidebar:
     st.caption("Prospecção Varejo · Curitiba")
     st.divider()
 
-    # Chave API
-    chave = st.text_input("🔑 Chave Google Maps API", type="password", placeholder="AIza...")
-    if chave:
-        st.session_state["api_key_override"] = chave
-    if "api_key_override" in st.session_state:
-        import places_api
-        places_api._get_key = lambda: st.session_state["api_key_override"]
-
     st.divider()
 
     # Bairros
